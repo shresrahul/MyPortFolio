@@ -268,19 +268,16 @@
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Professional Experience</h3>
+            {% for exp in experience %}
             <div class="resume-item">
-              <h4>Information Technology Officer</h4>
-              <h5>2019 - Present</h5>
-              <p><em>E-NET PAYMENT PVT. LTD, Kathmandu, Nepal</em></p>
-              <ul>
-                <li>Plan, organize, direct, control and evaluate the operations of information systems.</li>
-                <li>Develop and implement policies and procedures for computer systems development and operations.</li>
-                <li>Meet with clients to discuss system requirements, specifications and timelines.</li>
-                <li>Assemble and manage teams of information systems personnel to design, develop, implement, operate and
-                  administer computer and telecommunications software, networks and information systems.</li>
-              </ul>
+              <h4>{{exp.position}}</h4>
+              <h5>{{exp.from_date}} - {{exp.to_date}}</h5>
+              <p><em>{{exp.company}}, {{exp.address}}</em></p>
+              {{exp.duties|safe}}
             </div>
-            <div class="resume-item">
+            {% endfor %}
+
+            <!-- <div class="resume-item">
               <h4>Senior Technical Officer</h4>
               <h5>2017 - 2019</h5>
               <p><em>CYBERNETICS PVT. LTD, Kathmandu, Nepal</em></p>
@@ -293,7 +290,7 @@
                   and solving hardware/software problems.</li>
                 <li>Manage users, provide IT related support and backup systems.</li>
               </ul>
-            </div>
+            </div> -->
           </div>
         </div>
 

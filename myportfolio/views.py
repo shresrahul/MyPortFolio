@@ -5,6 +5,7 @@ from myskill.models import Myskill
 from education.models import Education
 from portfolio.models import PortFolio
 from testimonial.models import Testimonial
+from experience.models import Experience
 from django.views.generic import DetailView, ListView
 
 class IndexPageView(TemplateView):
@@ -18,6 +19,7 @@ class IndexPageView(TemplateView):
         data['educate'] = Education.objects.all().order_by('-id')
         data['portfolio_list'] = PortFolio.objects.all()
         data['testimonial'] = Testimonial.objects.all()
+        data['experience'] = Experience.objects.all()
         return data
     
 class PortFolioListView(ListView):
