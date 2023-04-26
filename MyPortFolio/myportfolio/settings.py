@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'contact',
     'portfolio',
     'testimonial',
+    'experience',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
